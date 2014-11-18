@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Exercices</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script language="javascript" type="text/javascript">
+            tpays = new Array();
+            tpays[32] = "Belgique";
+            tpays[33] = "France";
+            tpays[52] = "Mexique";
+            tpays[81] = "Japon";
+
+            document.write(tpays[52]);
+            document.write("<br/> Nbre pays: " + tpays.length);
+            
+            tpaysfrais = new Array();
+            tpaysfrais[0]= ["Allemagne",11];
+            tpaysfrais[1]= ["France",10];
+            tpaysfrais[2]= ["Belgique",5];
+            tpaysfrais[3]= ["Japon",15];
+
+            /*for(i=0; i<=3; i++)
+            {
+             document.write("<br/>"+tpaysfrais[0][i]);
+             document.write("<br/>"+tpaysfrais[1][i]);
+            };*/
+
+            var tabHTML="<table><tr><th>Pays</th><th>Code</th></tr>";
+            var ld='<FORM><SELECT name="pays" size="1">'
+            couleur ="lime" ;
+            for(i=0; i<=3; i++)
+            {
+                   
+             tabHTML += '<tr bgcolor="'+couleur+'"><td>'+tpaysfrais[i][0]+'</td>'; 
+             tabHTML += "<td>"+calculttc(tpaysfrais[i][1],0.20)+"</td></tr>";
+             ld += "<OPTION>"+tpaysfrais[i][0];
+             
+             gestcoul ();
+             
+            };
+            tabHTML += "</table>";
+            document.write(tabHTML);
+            ld += "</SELECT></FORM>"
+            document.write(ld); 
+            console.log(ld);
+            
+            function gestcoul ()
+            {
+             if(couleur =="lime")
+             {
+               couleur ="yellow";
+             } 
+             else 
+             {
+               couleur ="lime";  
+             };
+            };
+           
+           
+            function calculttc (ht,txtva)
+            {
+              return ttc = ht * (1+txtva); 
+             };
+
+    
+        </script>
+    </head>
+    <body>
+        <div class="ClassDiv1">Exercices</div>
+        
+        
+
+    </body>
+</html>
