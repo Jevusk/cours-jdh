@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TP 4</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript">
+            
+            $(function() {
+            // Document is ready
+                console.log("dom loaded")
+                console.log($("div").length);
+                $.each(["1","2","3"], function(i,valeur){
+                    console.log(valeur);
+                })
+                var object = $.extend({}, {nom: "dupond"}, {prenom: "jean"});
+                console.log(object);
+            })
+            console.log($("div").length);
+            
+        </script>
+     </head>
+    <body>
+        <div> Division 1</div>
+        <div> Division 2</div>
+        <div> Division 3</div>
+        <div> Division 3</div>
+    </body>
+</html>
